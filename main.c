@@ -94,6 +94,26 @@ int main()
         }
         if (code == 4)
         {
+
+            for (int i = 0; i < index; i++)
+            {
+                if (arr[i].yuwen + arr[i].shuxue + arr[i].yingyu < 180)
+                {
+                    printf("%s同学总分不及格\n", arr[i].name);
+                    printf("点击回车继续\n");
+                    char x;
+                    scanf("%c", &x);
+                    scanf("%c", &x);
+                }
+                else
+                {
+                    printf("无总分不及格\n");
+                    printf("点击回车继续\n");
+                    char x;
+                    scanf("%c", &x);
+                    scanf("%c", &x);
+                }
+            }
         }
         if (code == 5)
         {
