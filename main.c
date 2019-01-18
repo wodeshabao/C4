@@ -56,6 +56,25 @@ int main()
         }
         if (code == 3)
         {
+
+            if (index > 0)
+            {
+                for (int i = 0; i < index; i++)
+                {
+                    printf("%d同学的语文成绩为：%d,数学成绩为：%d,英语成绩为：%d\n", i + 1, arr[i].yuwen, arr[i].shuxue, arr[i].yingyu);
+                }
+                printf("点击回车继续\n");
+                char x;
+                scanf("%c", &x);
+                scanf("%c", &x);
+            }
+            else
+            {
+                printf("系统错误，无学生成绩，点击回车继续\n");
+                char x;
+                scanf("%c", &x);
+                scanf("%c", &x);
+            }
         }
         if (code == 4)
         {
