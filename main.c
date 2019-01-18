@@ -77,7 +77,7 @@ int main()
             {
                 for (int i = 0; i < index; i++)
                 {
-                    printf("第%d同学%s的语文成绩为：%d,数学成绩为：%d,英语成绩为：%d\n", i + 1,arr[i].name ,arr[i].yuwen, arr[i].shuxue, arr[i].yingyu);
+                    printf("第%d同学%s的语文成绩为：%d,数学成绩为：%d,英语成绩为：%d\n", i + 1, arr[i].name, arr[i].yuwen, arr[i].shuxue, arr[i].yingyu);
                 }
                 printf("点击回车继续\n");
                 char x;
@@ -94,26 +94,21 @@ int main()
         }
         if (code == 4)
         {
-
             for (int i = 0; i < index; i++)
             {
                 if (arr[i].yuwen + arr[i].shuxue + arr[i].yingyu < 180)
                 {
                     printf("%s同学总分不及格\n", arr[i].name);
-                    printf("点击回车继续\n");
-                    char x;
-                    scanf("%c", &x);
-                    scanf("%c", &x);
                 }
                 else
                 {
                     printf("无总分不及格的同学\n");
-                    printf("点击回车继续\n");
-                    char x;
-                    scanf("%c", &x);
-                    scanf("%c", &x);
                 }
             }
+            printf("点击回车继续\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if (code == 5)
         {
@@ -123,26 +118,39 @@ int main()
                 if ((arr[i].yuwen < 60) && (arr[i].shuxue < 60) && (arr[i].yingyu < 60))
                 {
                     printf("%s同学每一科都不及格\n", arr[i].name);
-                    printf("点击回车继续\n");
-                    char x;
-                    scanf("%c", &x);
-                    scanf("%c", &x);
                 }
                 else
                 {
                     printf("无每一科都不及格\n");
-                    printf("点击回车继续\n");
-                    char x;
-                    scanf("%c", &x);
-                    scanf("%c", &x);
                 }
             }
+            printf("点击回车继续\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if (code == 6)
         {
+            int max = 0;
+            int stuID = 0;
+            for (int i = 0; i < index; i++)
+            {
+                int z = arr[i].yuwen + arr[i].shuxue + arr[i].yingyu;
+                if (max < z)
+                {
+                    max = z;
+                    stuID = i;
+                }
+            }
+            printf("%s同学的总分最高为:%d\n", arr[stuID].name, arr[stuID].yuwen + arr[stuID].shuxue + arr[stuID].yingyu);
+            printf("点击回车继续\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if (code == 7)
         {
+            
         }
         if (code == 8)
         {
