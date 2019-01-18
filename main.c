@@ -77,7 +77,7 @@ int main()
             {
                 for (int i = 0; i < index; i++)
                 {
-                    printf("%d同学的语文成绩为：%d,数学成绩为：%d,英语成绩为：%d\n", i + 1, arr[i].yuwen, arr[i].shuxue, arr[i].yingyu);
+                    printf("第%d同学%s的语文成绩为：%d,数学成绩为：%d,英语成绩为：%d\n", i + 1,arr[i].name ,arr[i].yuwen, arr[i].shuxue, arr[i].yingyu);
                 }
                 printf("点击回车继续\n");
                 char x;
@@ -107,7 +107,7 @@ int main()
                 }
                 else
                 {
-                    printf("无总分不及格\n");
+                    printf("无总分不及格的同学\n");
                     printf("点击回车继续\n");
                     char x;
                     scanf("%c", &x);
@@ -117,6 +117,26 @@ int main()
         }
         if (code == 5)
         {
+
+            for (int i = 0; i < index; i++)
+            {
+                if ((arr[i].yuwen < 60) && (arr[i].shuxue < 60) && (arr[i].yingyu < 60))
+                {
+                    printf("%s同学每一科都不及格\n", arr[i].name);
+                    printf("点击回车继续\n");
+                    char x;
+                    scanf("%c", &x);
+                    scanf("%c", &x);
+                }
+                else
+                {
+                    printf("无每一科都不及格\n");
+                    printf("点击回车继续\n");
+                    char x;
+                    scanf("%c", &x);
+                    scanf("%c", &x);
+                }
+            }
         }
         if (code == 6)
         {
@@ -130,6 +150,5 @@ int main()
             break;
         }
     }
-
     return 0;
 }
