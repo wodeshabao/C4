@@ -150,7 +150,27 @@ int main()
         }
         if (code == 7)
         {
-            
+            double max = 0.0;
+            int stuID = 0;
+            for (int i = 0; i < index; i++)
+            {
+                if (arr[i].yuwen >= 60 && arr[i].shuxue >= 60 && arr[i].yingyu >= 60)
+                {
+                    double avg = (arr[i].yuwen + arr[i].shuxue + arr[i].yingyu) / 3.0;
+                    if (max < avg)
+                    {
+                        max = avg;
+                        stuID = i;
+                    }
+                }
+            }
+
+            printf("平均分最高且没有不及格科目的学生姓名为%s，语文：%d，数学%d，英语%d，平均分为：%d\n", arr[stuID].name, arr[stuID].yuwen, arr[stuID].shuxue, arr[stuID].yingyu, (arr[stuID].yuwen + arr[stuID].shuxue + arr[stuID].yingyu) / 3.0);
+
+            printf("\n点击回车继续\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if (code == 8)
         {
